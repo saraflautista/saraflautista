@@ -74,6 +74,12 @@ table {
 	color: white;
 }
 
+body{
+	width: 100%;
+	overflow-x: hidden;
+	background-color: #1255B3;
+}
+
 canvas{
 	position: fixed;
 	top: 0;
@@ -185,8 +191,9 @@ h4{
 	/* background-color: red; */
 	float: left;
 	/* background-color: rgba(255,255,255,0.8); */
-	background-color: rgba(0,169,179,0.8); */ /* green-blue
-	/* background-color: rgba(179,71,0,0.8); /* orange */ */
+	background-color: rgba(0,169,179,0.8); /* green-blue */
+	/* background-color: rgba(179,71,0,0.8); /* orange */
+	overflow: hidden;
 }
 
 #body{
@@ -223,6 +230,7 @@ h4{
 }
 
 @media only screen and (max-width: 860px) {
+/* @media only screen and (max-width: 300px) { */
 	/* #content{ */
 		/* width: 50vw; */
 	/* } */

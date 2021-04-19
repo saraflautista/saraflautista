@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sara Morais - Flautista</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<!-- <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'> -->
+		<link href='main.css' rel='stylesheet' type='text/css'>
+		<link rel="shortcut icon" href="#">
+		<script src="pixi.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<!-- <script src="C:/Users/artur/OneDrive/Imagens/RPG/jquery-3.4.1.min.js"></script> -->
+		<!-- Referência para floating: https://codepen.io/enricotoniato/pen/dteFo -->
+	</head>
+	<body>
+		<div id="body">
+			<header id="abstract" class="animatable">
+				<section class="abstract_main">
+					<!-- <img id="perfil" src="data:image/jpeg;base64,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" alt="foto de perfil da Sara"> -->
+					<a href="https://www.facebook.com/sara.rebeca.188" target="_blank"><img id="perfil" src="img/Sara_v3.png" alt="foto de perfil da Sara" width="80%" /></a>
+					<h2 style="font-family:Italianno; font-size: 64px; text-shadow: 2px 2px 4px #000000;">Sara Morais</h2>
+					<h3>Flautista</h3>
+				</section>
+				<section class="abstract_main">
+					<h4>Contato</h4>
+					<span class="abstract_list">rebecaflute@gmail.com</span>
+				</section>
+				<section class="abstract_main">
+					<h4>Perfil</h4>
+					<span class="abstract_list"><span id="age">29</span> anos</span>
+					<span class="abstract_list">Caucaia, Ceará</span>
+					<span class="abstract_list"><span id="research_time">9</span> anos de dedicação à flauta</span>
+					<br/>
+					<span class="abstract_list">
+						Bacharel em flauta transversal pela Universidade Estadual do Ceará (UECE)
+					</span>
+				</section>
+			</header>
+			<section id="content">
+				<article class="thematic" style="font-size: 24px;">
+					<header>Serviços</header>
+					<div>
+						Apresentações: shows, restaurantes e eventos.
+					</div>
+					<div>
+						Aulas particulares ou em grupo.
+					</div>
+				</article>
+				<article class="thematic">
+					<header>Formação</header>
+					<div>
+						<div class="list">Bacharelado em Flauta Transversal pela Universidade Estadual do Ceará (UECE), conclusão em 2018, orientação prof. Heriberto Cavalcante Porto Filho</div>
+						<div class="list">Festivais: XV Festival Eleazar de Carvalho</div>
+						<div class="list">12° Festival Internacional de Flautistas</div>
+						<div class="list">14° Festival Música da Ibiapaba, oficina de flauta e prática de	conjunto do grupo Marimbanda</div>
+					</div>
+				</article>
+				<article class="thematic">
+					<header>Atuação</header>
+					<!-- Aula de Flauta Transversal no CMAN - início 2018 -->
+					<div class="">
+						<!-- <span style="text-align:center;">Hoje</span> -->
+						<div class="list">Professora de flauta transversal no Conservatório de Música Alberto Nepomuceno (CMAN) e aulas particulares</div>
+						<div class="list">Banda Sinfônica da UECE</div>
+						<div class="list">Orquestra Transversal da UECE</div>
+						<div class="list">Orquestra Heitor Villa-Lobos</div>
+						<div class="list">Grupo Sons de Vós</div>
+						<div class="list">Projeto Música</div>
+					</div>
+					
+					<h3>Apresentações</h3>				
+					<div>
+						<div>
+							<div class="list">
+								Musical O Corcunda de Notre Dame – 2018
+							</div>
+							<div class="list">
+								XVII Festival Eleazar de Carvalho – 2015
+							</div>
+							<div class="list">
+								XV Festival Eleazar de Carvalho - 2013
+							</div>
+							<div class="list">
+								Sarau de Lançamento do livro: "Conselhos aos jovens músicos: regras musicais para casa e para a vida de Robert Schumann" – 2016
+							</div>
+							<div class="list">
+								XII Festival Música na Ibiapaba - 2016
+							</div>
+						</div>
+					</div>
+					<h3>Grupos</h3>
+					<div>
+						<div class="list">Orquestra Transversal da UECE - 2014</div>
+						<div class="list">Banda Sinfônica da UECE - 2015</div>
+						<div class="list">Orquestra Heitor Villa-Lobos - 2018</div>
+						<div class="list">Grupo Sons de Vós - 2018</div>
+					</div>
+				</article>
+			</section>
+		</div>
+	</body>
+	<script src="floatingNotes.js"></script>
+	<script>
+		$(document).ready(function(){
+			let birth = parseInt( (Date.now() - new Date(1992, 0, 1) )/(365*24*3600*1000) );
+			let fluteYears = 10 + parseInt( (Date.now() - new Date(2021, 0, 1) )/(365*24*3600*1000) );
+			
+			$("#age").text(birth)
+			$("#research_time").text(fluteYears)
+		})
+	</script>
+</html>

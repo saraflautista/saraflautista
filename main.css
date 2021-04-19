@@ -1,0 +1,243 @@
+
+/* RESET
+	http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+/*ol, ul {
+	list-style: none;
+}*/
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+	Uh, uh, font-familyyy
+*/
+@font-face {
+    font-family: SolveigText;
+    src: url("fonts/solveig/SolveigText.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Italianno;
+    src: url("fonts/italianno/Italianno-Regular.ttf") format("opentype");
+}
+
+/* @font-face { */
+    /* font-family: GraublauWeb; */
+    /* font-weight: bold; */
+    /* src: url("path/GraublauWebBold.otf") format("opentype"); */
+/* } */
+
+/* 	Tutu code
+*/
+*{
+	color: white;
+}
+
+canvas{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+h2{
+	font-size: 36px;
+	font-family: Italianno;
+}
+
+h3{
+	font-size: 32px;
+	font-family: Italianno;
+}
+
+h4{
+	font-size: 32px;
+	font-family: Italianno;
+	/* for border */
+	padding-bottom: 2px;
+	margin-top: 12px;
+	margin-bottom: 4px;
+	border-bottom: 2px solid white;
+}
+
+.animatable {
+	position: relative;
+	clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	animation: .75s cubic-bezier(1,-0.01,.12,.8) 0.5s 1 reveal forwards;
+}
+
+.animatable::after {
+  /* content: ''; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #20262b;
+  padding: inherit;
+  animation: .75s cubic-bezier(1,-0.01,.12,.8) 1s 1 hideBlack forwards;
+}
+
+@keyframes reveal {
+  from { clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); }
+  to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+}
+
+@keyframes hideBlack {
+  from { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  to { clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); }
+}
+
+.abstract_line{
+	padding: 4px;
+}
+
+.abstract_main{
+	/* min-width: 230px; */
+	width: 20vw;
+	padding: 2px;
+	text-align: center;
+}
+
+.abstract_main > div{
+	font-size: 20px;
+}
+
+.abstract_list{
+	font-size: 24px;
+	padding: 2px;
+	clear: both;
+	display: block;
+}
+.list{
+	font-size: 16px;
+	padding: 2px;
+	clear: both;
+	display: block;
+}
+
+.list:hover{
+	background-color: rgba(152,81,0,0.9);
+}
+
+.thematic > div:hover{
+	background-color: rgba(0,41,90,0.8);
+}
+
+.thematic > header{
+	font-size: 60px;
+	font-family: Italianno;
+	/* font-family: SolveigText; */
+	color: white;
+	padding: 10px;
+	/* for border */
+	padding-bottom: 2px;
+	margin-bottom: 4px;
+	border-bottom: 2px solid white;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+#abstract{
+	margin:20, 0;
+	padding: 8px;
+	min-height: 90vh;
+	/* background-color: red; */
+	float: left;
+	/* background-color: rgba(255,255,255,0.8); */
+	background-color: rgba(0,169,179,0.8); */ /* green-blue
+	/* background-color: rgba(179,71,0,0.8); /* orange */ */
+}
+
+#body{
+	width: 80vw;
+	margin: 0 10vw;
+	font-size: 16px;
+	/* height: 100%; */
+	height: 100vh;
+	/* background-color: rgba(255,255,255,0.3); */
+}
+
+#content{
+	width: calc(60vw - 40px);
+	float: left;
+	padding: 10px;
+	/* padding-left: 20px; */
+	min-height: 90vh;
+	/* height: 100vh; */
+	/* background-color: green; */
+	/* height: 100px; */
+	/* background-color: rgba(255,255,255,0.3); */
+	background-color: rgba(102,41,0,0.3);
+	/* background-color: rgba(0,169,179,0.8); */
+	/* background-color: rgba(0,96,102,0.8); */
+}
+
+#perfil{
+	border-radius: 50%;
+	/* width: 10px; */
+}
+
+#perfil:hover{
+	transform: scale(1.05);
+}
+
+@media only screen and (max-width: 860px) {
+	/* #content{ */
+		/* width: 50vw; */
+	/* } */
+	#perfil{
+		width: 50vw;
+	}
+	.abstract_main{
+		width: 80vw;
+		font-size: 24px;
+		
+		min-width: none;
+		max-width: none;
+	}
+	#content{
+		width: 80vw;
+		font-size: 24px;
+	}
+} 

@@ -164,11 +164,13 @@ h4{
 }
 
 .list:hover{
-	background-color: rgba(152,81,0,0.9);
+	/* background-color: rgba(152,81,0,0.9); */
+	background-color: #111;
 }
 
 .thematic > div:hover{
-	background-color: rgba(0,41,90,0.8);
+	/* background-color: rgba(0,41,90,0.8); */
+	background-color: #411;
 }
 
 .thematic > header{
@@ -182,6 +184,7 @@ h4{
 	margin-bottom: 4px;
 	border-bottom: 2px solid white;
 	text-shadow: 2px 2px 4px #000000;
+	/* background-color: #419; */
 }
 
 #abstract{
@@ -191,7 +194,8 @@ h4{
 	/* background-color: red; */
 	float: left;
 	/* background-color: rgba(255,255,255,0.8); */
-	background-color: rgba(0,169,179,0.8); /* green-blue */
+	/* background-color: rgba(0,169,179,0.8); /* green-blue */ */
+	background-color: rgba(0,0,0,0.8); /* gray */
 	/* background-color: rgba(179,71,0,0.8); /* orange */
 	overflow: hidden;
 }
@@ -215,7 +219,7 @@ h4{
 	/* background-color: green; */
 	/* height: 100px; */
 	/* background-color: rgba(255,255,255,0.3); */
-	background-color: rgba(102,41,0,0.3);
+	background-color: rgba(90,41,0,0.3);
 	/* background-color: rgba(0,169,179,0.8); */
 	/* background-color: rgba(0,96,102,0.8); */
 }

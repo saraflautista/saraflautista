@@ -96,7 +96,7 @@ var app = new PIXI.Application({
     height: window.innerHeight,
     // height: height_render,
     // backgroundColor: 0x8bc5ff//0x2c3e50
-    backgroundColor: 0x1255B3
+    backgroundColor: 0x000000
 });
 document.body.appendChild(app.view);
 

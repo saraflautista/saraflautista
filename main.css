@@ -1,4 +1,3 @@
-
 /* RESET
 	http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -86,6 +85,7 @@ canvas{
 	top: 0;
 	left: 0;
 	z-index: -1;
+	height: 100vh;
 }
 
 h2{
@@ -235,19 +235,16 @@ h4{
 }
 
 @media only screen and (max-width: 860px) {
-/* @media only screen and (max-width: 300px) { */
-	/* #content{ */
-		/* width: 50vw; */
-	/* } */
 	#perfil{
 		width: 50vw;
+		background-color: #ccc;
 	}
 	.abstract_main{
 		width: 80vw;
 		font-size: 24px;
 		
-		min-width: none;
-		max-width: none;
+		/*min-width: none;
+		max-width: none;*/
 	}
 	#content{
 		width: 80vw;

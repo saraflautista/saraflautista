@@ -101,11 +101,13 @@ var app = new PIXI.Application({
 document.body.appendChild(app.view);
 
 var notes = []
-var numSong = (window.innerWidth > 800) ? 30 : 12;
-var tamSong = (window.innerWidth > 800) ? 60 : 40;
+var numSong, tamSong, velSong;
+numSong = (window.innerWidth > 800) ? 30 : 12;
+tamSong = (window.innerWidth > 800) ? 60 : 40;
+velSong = (window.innerWidth > 800) ? 5 : 2;
 
 for(var i=0; i<numSong; i++){
-	notes.push( new MusicSymbol(textures[ randomInt( textures.length ) ], app, tamSong, 5, -4) );
+	notes.push( new MusicSymbol(textures[ randomInt( textures.length ) ], app, tamSong, velSong, -4) );
 	// notes[i].sprite.tint = 0x00FF00;
 	app.stage.addChild(notes[i].sprite);
 }
